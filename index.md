@@ -82,4 +82,6 @@ effect that prints that value into the console.
 ## Next
 
 We have now taken a look at the stream abstraction. We've also gotten our hands
-warm with Bacon.js. Next, let's dive into the world of [combinators](combinators.html).
+warm with Bacon.js.
+
+Next, let's dive into the world of [combinators](combinators.html).
