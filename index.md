@@ -1,7 +1,8 @@
 ---
-title: Streams – an introduction to reactive programming
+title: Introduction
 layout: default
 ---
+# Streams – an introduction to reactive programming
 
 Welcome to studying reactive programming. Let's start by comparing promises and
 streams. Here we assume that you have used the promise abstraction (jQuery has
