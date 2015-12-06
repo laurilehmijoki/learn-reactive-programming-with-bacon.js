@@ -53,7 +53,7 @@ Then create a stream:
 You've just defined a stream of numbers 1, 2 and 3, which will appear with the
 interval of 500 milliseconds. Contrary to many promise implementations, Bacon.js
 is lazy. This means that the stream is not evaluated unless it has a
-side-effect. Our stream does not yet have one. Let's define it:
+side effect. Our stream does not yet have one. Let's define it:
 
     numberStream.onValue(number => {
       console.log(number)
