@@ -43,6 +43,12 @@ There are many other combinators in Bacon.js, but the above ones are the
 fundamental combinators. Once you understand them, you can rather easily
 understand all the other combinators that you encounter.
 
+### Exercise: the `map` combinator
+
+Create a stream that sequentially emits the numbers 1, 2 and 3. Then transform
+that stream with the `map` combinator such that the resulting stream will emit
+the values 1, 8 and 27.
+
 ## A note on side effects in combinators
 
 You should **not** run any side effects in combinators. Use `onValue` or
