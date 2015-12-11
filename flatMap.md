@@ -40,3 +40,12 @@ Above, we changed a stream of strings into a stream of HTTP responses. We could
 not have done that with `map`, because `map` only allows us to change the values
 *in the stream*. In contrast, `flatMap` allowed us to change the structure of
 the stream from strings to HTTP responses.
+
+### Exercise: `flatMap`
+
+Create a stream of numbers:
+
+    const numbersStream = Bacon.fromArray([1,2,3])
+
+Then transform the stream such that the resulting stream will emit the values `1
+second(s)`, `2 second(s)` and `3 second(s)` every one second.
