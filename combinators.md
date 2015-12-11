@@ -14,22 +14,21 @@ should return a value. The type of the return value depends on the combinator. T
 combinator always results in a new stream.
 
 In other words, combinators let us build complex structures with simple
-functions. Combinators solve the same problem as the composition pattern in
-object-oriented programming.
-
-Let's express a combinator with a Scala-like type signature:
-
-    combinator: ((A) => B): Observable[B]
-
-(`Observable` is the class in Bacon.js that defines the `onValue` method.)
+functions. Combinators solve the same problem as the composition
+pattern in object-oriented programming.
 
 For example, this is how we can use the `map` combinator:
 
-    Bacon.once(1).map(number => number * 2)
+    const doubledValue = Bacon.once(1).map(number => number * 2)
 
 The type signature for the `map` combinator above is this:
 
-    map: ((Number) => Number): Observable[Number]
+    map :: (a -> b) -> Observable b
+
+Here is how the type signature reads: `map` takes in function `a -> b`. The
+function `a -> b` accepts a value `a`, and it will return a value `b`. The `map`
+function will use that function, and it will return an `Observable` on the value
+`b`.
 
 ## Commonly used combinators in Bacon.js
 
@@ -49,8 +48,12 @@ Create a stream that sequentially emits the numbers 1, 2 and 3. Then transform
 that stream with the `map` combinator such that the resulting stream will emit
 the values 1, 8 and 27.
 
-## A note on side effects in combinators
+### Exercise: the `filter` combinator
 
-You should **not** run any side effects in combinators. Use `onValue` or
-`onError` if you need to run a side effect.
+Again, Create a stream that sequentially emits the numbers 1, 2 and 3. With the
+help of the `filter` combinator, let through only values that are even.
 
+## Next: the `flatMap` combinator
+
+The `flatMap` combinator captures a fundamental programming concept. [Let's take
+a closer look at it.](flatMap.html)

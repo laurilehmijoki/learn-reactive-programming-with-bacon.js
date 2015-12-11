@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{page.title}}</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bacon.js/0.7.82/Bacon.min.js"></script>
+    <script type="text/javascript">
+      console.log('Welcome! Bacon is now loaded.', Bacon)
+    </script>
     <style type="text/css">
       body{
         margin:12px auto;
@@ -56,14 +60,16 @@
       img {
         max-width: 100%;
       }
+      td:not(:first-child) {
+        padding-left: 0.5em;
+      }
     </style>
   </head>
   <body>
     <header>
       <nav>
         <ul>
-          <li> <a class="nav-link" href="">Introduction</a> </li>
-          <li> <a class="nav-link" href="combinators.html">Combinators-todo</a> </li>
+          <li> <a class="nav-link" href="">Home</a> </li>
         </ul>
       </nav>
     </header>

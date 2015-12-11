@@ -30,21 +30,8 @@ Bacon.js [provides](https://github.com/baconjs/bacon.js#creating-streams) a set
 of functions that let you create streams of values (or event streams, as they
 are often called).
 
-First, let's install an environment for hacking with streams. Type the following
-commands into your command-line console (we assume that you have already
-installed the latest [Node.js](https://nodejs.org/)):
-
-    mkdir hacking-with-streams
-    cd hacking-with-streams
-    npm init --force
-    npm install --save --save-exact baconjs
-    node # This will start the Node.js REPL
-
-You are now in the Node.js REPL (i.e., Read Evaluate Print Loop).
-
-Now, load Bacon.js:
-
-    const Bacon = require('baconjs')
+Let's use the Chrome console as our JavaScript environment. Open the Developer
+Tools on this page (on Mac, press `⌥+⌘+J`).
 
 Then create a stream:
 
@@ -62,24 +49,15 @@ side effect. Our stream does not yet have one. Let's define it:
 Above, we used the `onValue` function, which told the `numberStream` that it's
 services are needed by the side-effecting `console.log` function.
 
-### A note on side effects and combinators
-
-In Bacon.js, combinators are functions that take in another function.
-Combinators pass each value in the stream to that function, and the function
-should return a value. The type of the return value depends on the combinator. The
-combinator always results in a new stream.
-
-You should **not** run any side effects in combinators. Use `onValue` or
-`onError` if you need to run a side effect.
-
-Examples of combinators are `map`, `filter` and `flatMap`.
-
-## Exercise 1 – create a stream
+### Exercise – create a stream
 
 Create a stream that emits the value "hello" after 1 second. Then define a side
 effect that prints that value into the console.
 
-## Next
+Tip: [here](https://github.com/baconjs/bacon.js#creating-streams) you can find
+the function that creates a delayed stream.
+
+## Next: combinators
 
 We have now taken a look at the stream abstraction. We've also gotten our hands
 warm with Bacon.js.
