@@ -35,6 +35,9 @@ strings into a database query:
       fetch(`https://httpbin.org/response-headers?result=Results for ${textInput}`)
         .then(response => response.json())
     ))
+    databaseResults.onValue(result => {
+      console.log('HTTP response', result)
+    })
 
 Above, we changed a stream of strings into a stream of HTTP responses. We could
 not have done that with `map`, because `map` only allows us to change the values
@@ -49,3 +52,26 @@ Create a stream of numbers:
 
 Then transform the stream such that the resulting stream will emit the values `1
 second(s)`, `2 second(s)` and `3 second(s)` every one second.
+
+## Error handling in stream programming
+
+Because streams are computation containers, they allow us to neatly separate
+successful computations from failed ones.
+
+Let's consider the search example we introduced above. What if the HTTP request
+fails? How will an error manifest in a stream? Let's change the hostname
+`httpbin.org` to `foobar.org` and see what happens.
+
+    const searchInputs = Bacon.fromArray(['h', 'hel', 'hello'])
+    const databaseResults = searchInputs.flatMap(textInput => Bacon.fromPromise(
+      fetch(`https://foobar.org/response-headers?result=Results for ${textInput}`)
+        .then(response => response.json())
+    ))
+    databaseResults.onValue(result => {
+      console.log('HTTP response', result)
+    })
+
+Notice how the `HTTP response` string did not appear in the console log. This is
+because the [`fetch`](https://developer.mozilla.org/en/docs/Web/API/Fetch_API)
+promise resolved into a failure, and `Bacon.fromPromise` translated that failure
+into an error event in the `databaseResults` stream.
