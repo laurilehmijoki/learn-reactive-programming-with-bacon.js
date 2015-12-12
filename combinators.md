@@ -35,7 +35,7 @@ function will use that function, and it will return an `Observable` on the value
 * `map` – transforms the value in the stream with a function
 * `filter` – rejects values in the stream
 * `flatMap` – spawns a stream with a new source
-* `combine` – combines the latest values of the two streams or properties using a two-arg function
+* `combine` – combines the latest values of two streams using a two-arg function
 * `merge` – merges two streams into one stream that delivers events from both
 
 There are many other combinators in Bacon.js, but the above ones are the
