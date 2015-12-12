@@ -28,15 +28,20 @@ as an event.
 
 Let's assume that our electronic rulers are aligned in a right angle:
 
-    ruler a
+    ruler 1
     |
     |
     |   AREA
     |
     |------------------
-                      ruler b
+                      ruler 2
 
 Define a stream that emits the area defined by the two rulers.
+
+You can use the following streams:
+
+    ruler1Length = Bacon.sequentially(500, [12, 15, 17, 20])
+    ruler2Length = Bacon.sequentially(500, [22, 28, 40, 55])
 
 ## Next: `merge`
 
