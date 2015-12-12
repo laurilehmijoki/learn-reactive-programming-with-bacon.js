@@ -30,8 +30,8 @@ Let's imagine that we have a stream of strings from a text input field (think of
 a search field on a web application). Now we'd like to transform each of those
 strings into a database query:
 
-    const searchInputs = Bacon.fromArray(['h', 'hel', 'hello'])
-    const databaseResults = searchInputs.flatMap(textInput => Bacon.fromPromise(
+    searchInputs = Bacon.fromArray(['h', 'hel', 'hello'])
+    databaseResults = searchInputs.flatMap(textInput => Bacon.fromPromise(
       fetch(`https://httpbin.org/response-headers?result=Results for ${textInput}`)
         .then(response => response.json())
     ))
@@ -48,7 +48,7 @@ the stream from strings to HTTP responses.
 
 Create a stream of numbers:
 
-    const numbersStream = Bacon.fromArray([1,2,3])
+    numbersStream = Bacon.fromArray([1,2,3])
 
 Then transform the stream such that the resulting stream will emit the values `1
 second(s)`, `2 second(s)` and `3 second(s)` every one second.
@@ -62,8 +62,8 @@ Let's consider the search example we introduced above. What if the HTTP request
 fails? How will an error manifest in a stream? Let's change the hostname
 `httpbin.org` to `foobar.org` and see what happens.
 
-    const searchInputs = Bacon.fromArray(['h', 'hel', 'hello'])
-    const databaseResults = searchInputs.flatMap(textInput => Bacon.fromPromise(
+    searchInputs = Bacon.fromArray(['h', 'hel', 'hello'])
+    databaseResults = searchInputs.flatMap(textInput => Bacon.fromPromise(
       fetch(`https://foobar.org/response-headers?result=Results for ${textInput}`)
         .then(response => response.json())
     ))

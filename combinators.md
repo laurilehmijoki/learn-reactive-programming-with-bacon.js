@@ -19,7 +19,7 @@ pattern in object-oriented programming.
 
 For example, this is how we can use the `map` combinator:
 
-    const doubledValue = Bacon.once(1).map(number => number * 2)
+    doubledValue = Bacon.once(1).map(number => number * 2)
 
 The type signature for the `map` combinator above is this:
 

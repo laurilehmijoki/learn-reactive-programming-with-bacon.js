@@ -35,7 +35,7 @@ Tools on this page (on Mac, press `⌥+⌘+J`).
 
 Then create a stream:
 
-    const numberStream = Bacon.sequentially(500, [1,2,3])
+    numberStream = Bacon.sequentially(500, [1,2,3])
 
 You've just defined a stream of numbers 1, 2 and 3, which will appear with the
 interval of 500 milliseconds. Contrary to many promise implementations, Bacon.js
