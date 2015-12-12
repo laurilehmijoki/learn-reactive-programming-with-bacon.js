@@ -16,9 +16,8 @@ descending level of abstraction.
      ↓
     The Bacon.js library
 
-Let's start by comparing promises and
-streams. Here we assume that you have used the promise abstraction (jQuery has
-promises, for example).
+Let's start by comparing promises and streams. Here we assume that you have used
+the promise abstraction.
 
 ## The difference between promises and streams
 
