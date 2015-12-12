@@ -20,6 +20,24 @@ computation container. Below are examples of containers:
 The concept of computation container allows us to handle the computation and the
 container separately. This results in greater flexibility.
 
+## An excursion: computation containers in other programming environments
+
+The idea of computation containers is not particular to stream programming. Once
+you understand the idea, you can benefit from it in various contexts.
+
+### Scala
+
+    $ scala
+    scala> Seq(1,2,3).flatMap(num => Seq(num, num * 2))
+    res0: Seq[Int] = List(1, 2, 2, 4, 3, 6)
+
+### Haskell
+
+    $ ghci
+    Prelude> import Control.Monad
+    Prelude Control.Monad> [1,2,3] >>= (\num -> [num, num * 2])
+    [1,2,2,4,3,6]
+
 ## Changing the structure of a stream with `flatMap`
 
 We can think of a stream as a container for asynchronous values. With the `map`
