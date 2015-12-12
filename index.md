@@ -4,12 +4,26 @@ layout: default
 ---
 # Streams – an introduction to reactive programming
 
-Welcome to studying reactive programming. Let's start by comparing promises and
-streams. Here we assume that you have used the promise abstraction (jQuery has
-promises, for example).
+Welcome to studying reactive programming.
+
+## When to use reactive programming – a checklist
+
+* Your program models asynchronous phenomena
+* Your program is easy to think in terms of events
+* You would like to refine low-level events into high-level user interfaces
+
+## When *not* to use reactive programming – another checklist
+
+* Your program does not interact with the user's input devices such as keyboard
+  or mouse
+* Your program is not dependent on network events such as WebSocket messages
+* Your team does not have time or motivation to study a new programming style
 
 ## The difference between promises and streams
 
+Let's start by comparing promises and
+streams. Here we assume that you have used the promise abstraction (jQuery has
+promises, for example).
 
 There are several abstractions that attempt to make it easier to deal with
 asynchronous code. The promise and stream abstractions are one of them. An
