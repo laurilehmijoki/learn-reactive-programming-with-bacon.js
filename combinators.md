@@ -50,7 +50,7 @@ the values 1, 8 and 27.
 
 ### Exercise: the `filter` combinator
 
-Again, Create a stream that sequentially emits the numbers 1, 2 and 3. With the
+Again, create a stream that sequentially emits the numbers 1, 2 and 3. With the
 help of the `filter` combinator, let through only values that are even.
 
 ## Next: the `flatMap` combinator
