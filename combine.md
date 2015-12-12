@@ -39,7 +39,7 @@ Let's assume that our electronic rulers are aligned in a right angle:
 
 Define a stream that emits the area defined by the two rulers.
 
-You can use the following streams:
+You can use the following streams to simulate the event streams from the rulers:
 
     ruler1Length = Bacon.sequentially(500, [12, 15, 17, 20])
     ruler2Length = Bacon.sequentially(500, [22, 28, 40, 55])
