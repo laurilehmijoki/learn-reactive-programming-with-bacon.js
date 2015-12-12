@@ -16,7 +16,7 @@ Welcome to studying reactive programming.
 
 * Your program does not interact with the user's input devices such as keyboard
   or mouse
-* Your program is not dependent on network events such as WebSocket messages
+* Your program is not depend on network events such as WebSocket messages
 * Your team does not have time or motivation to study a new programming style
 
 ## Next: streams
