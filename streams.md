@@ -23,8 +23,8 @@ the promise abstraction.
 
 There are several abstractions that attempt to make it easier to deal with
 asynchronous code. The promise and stream abstractions are one of them. An
-important difference between these two abstractions is that promises deal with
-singular results, where as streams deal with multiple results.
+important difference between these two abstractions is that promise deals with
+a singular result, whereas stream deals with multiple results.
 
 In other words, a promise says that it will give you back one asynchronous
 result. A stream says that it will provide you with potentially infinite number
