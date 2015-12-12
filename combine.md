@@ -16,6 +16,7 @@ layout: default
         (greeting, person) => `${greeting}, ${person}!`
       )
       .onValue(message => console.log(message))
+    // Will print "hello, Aatami!" after two seconds
 
 A stream created with the `combine` combinator will emit an event whenever one
 of underlying streams emit an event.
