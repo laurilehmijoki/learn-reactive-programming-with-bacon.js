@@ -61,8 +61,8 @@ strings into a database query:
 
 Above, we changed a stream of strings into a stream of HTTP responses. We could
 not have done that with `map`, because `map` only allows us to change the values
-*in the stream*. In contrast, `flatMap` allowed us to change the structure of
-the stream from strings to HTTP responses.
+*in the stream*. In contrast, `flatMap` allowed us to spawn a new stream from
+each event in the `searchInputs` stream.
 
 ### Exercise: `flatMap`
 
