@@ -32,7 +32,7 @@ function will use that function, and it will return an `Observable` on the value
 
 ## Commonly used combinators in Bacon.js
 
-* `map` – transforms values in the stream with a function
+* `map` – transforms values in the stream
 * `filter` – rejects values in the stream
 * `flatMap` – spawns a stream with a new source
 * `combine` – combines the latest values of two streams using a two-arg function
