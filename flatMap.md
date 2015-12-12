@@ -38,6 +38,8 @@ you understand the idea, you can benefit from it in various contexts.
     Prelude Control.Monad> [1,2,3] >>= (\num -> [num, num * 2])
     [1,2,2,4,3,6]
 
+Next, let's turn back to `flatMap`.
+
 ## Changing the structure of a stream with `flatMap`
 
 We can think of a stream as a container for asynchronous values. With the `map`
