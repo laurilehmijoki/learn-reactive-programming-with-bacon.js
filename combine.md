@@ -17,6 +17,9 @@ layout: default
       )
       .onValue(message => console.log(message))
 
+A stream created with the `combine` combinator will emit an event whenever one
+of underlying streams emit an event.
+
 ## Exercise
 
 You have two electronic rulers. Both of them are equiped with a sensor that
@@ -34,3 +37,8 @@ Let's assume that our electronic rulers are aligned in a right angle:
                       ruler b
 
 Define a stream that emits the area defined by the two rulers.
+
+## Next: `merge`
+
+Next, we'll look at [`merge`](merge.html), which provides another way of joining
+streams.
