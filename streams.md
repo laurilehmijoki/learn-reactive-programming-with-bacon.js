@@ -14,7 +14,7 @@ descending level of abstraction.
      ↓
     Stream programming
      ↓
-    The Bacon.js library
+    The Bacon.js library (alternatives: RxJS or Kefir)
 
 Let's start by comparing promises and streams. Here we assume that you have used
 the promise abstraction.
