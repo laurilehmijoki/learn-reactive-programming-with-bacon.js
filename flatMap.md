@@ -75,3 +75,22 @@ Notice how the `HTTP response` string did not appear in the console log. This is
 because the [`fetch`](https://developer.mozilla.org/en/docs/Web/API/Fetch_API)
 promise resolved into a failure, and `Bacon.fromPromise` translated that failure
 into an error event in the `databaseResults` stream.
+
+Let's add a handler for the error events:
+
+    searchInputs = Bacon.fromArray(['h', 'hel', 'hello'])
+    databaseResults = searchInputs.flatMap(textInput => Bacon.fromPromise(
+      fetch(`https://foobar.org/response-headers?result=Results for ${textInput}`)
+        .then(response => response.json())
+    ))
+    databaseResults.onError(errorMessage => {
+      console.log('Got error', errorMessage)
+    })
+
+Above, we defined the `onError` handler instead of the success-handler
+`onValue`.
+
+## Next: the `combine` combinator
+
+We learned that `flatMap` allows us to define new event sources. [Let's see how
+we can combine streams](combine.html).
