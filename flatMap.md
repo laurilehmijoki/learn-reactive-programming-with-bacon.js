@@ -5,24 +5,24 @@ layout: default
 
 # The `flatMap` combinator
 
-## The general idea of computation containers
+## The general idea of computation contexts
 
 The idea behind `flatMap` captures a fundamental programming concept of
-computation container. Below are examples of containers:
+computation context. Below are examples of contexts:
 
-|**container**|**computation**|**example**|
+|**context**|**computation**|**example**|
 |list|item in list|`[1,2,3]`
 |dictionary|key-value pair|`{myValue: true}`
 |string|character|`'hello'`
 |promise|asynchronous value|`Promise.resolve(42).delay(500) // Bluebird`
 |stream|many asynchronous values|`Bacon.sequentially(500, [1,2,3])`
 
-The concept of computation container allows us to handle the computation and the
-container separately. This results in greater flexibility.
+The concept of computation context allows us to handle the computation and the
+context separately. This results in greater flexibility.
 
-## An excursion: computation containers in other programming environments
+## An excursion: computation contexts in other programming environments
 
-The idea of computation containers is not particular to stream programming. Once
+The idea of computation contexts is not particular to stream programming. Once
 you understand the idea, you can benefit from it in various contexts.
 
 ### Scala
@@ -42,7 +42,7 @@ Next, let's turn back to `flatMap`.
 
 ## Changing the structure of a stream with `flatMap`
 
-We can think of a stream as a container for asynchronous values. With the `map`
+We can think of a stream as a context for asynchronous values. With the `map`
 combinator we can transform the value *in* the stream, but what if want to
 change the structure of the stream? We need to use `flatMap`.
 
@@ -75,7 +75,7 @@ second(s)`, `2 second(s)` and `3 second(s)` every one second.
 
 ## Error handling in stream programming
 
-Because streams are computation containers, they allow us to neatly separate
+Because streams are computation contexts, they allow us to neatly separate
 successful computations from failed ones.
 
 Let's consider the search example we introduced above. What if the HTTP request
