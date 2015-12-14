@@ -34,8 +34,7 @@ you understand the idea, you can benefit from it in various contexts.
 ### Haskell
 
     $ ghci
-    Prelude> import Control.Monad
-    Prelude Control.Monad> [1,2,3] >>= (\num -> [num, num * 2])
+    Prelude> [1,2,3] >>= (\num -> [num, num * 2])
     [1,2,2,4,3,6]
 
 Next, let's turn back to `flatMap`.
