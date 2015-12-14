@@ -72,6 +72,10 @@ Create a stream of numbers:
 Then transform `numbersStream` such that the resulting stream will emit the values `1
 second(s)`, `2 second(s)` and `3 second(s)` every one second.
 
+### Exercise: implement `map` with the help of `flatMap`
+
+### Exercise: implement `filter` with the help of `flatMap`
+
 ## Error handling in stream programming
 
 Because streams are computation contexts, they allow us to neatly separate

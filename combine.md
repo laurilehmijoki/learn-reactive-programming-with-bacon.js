@@ -44,6 +44,8 @@ You can use the following streams to simulate the event streams from the rulers:
     ruler1Length = Bacon.sequentially(500, [12, 15, 17, 20])
     ruler2Length = Bacon.sequentially(500, [22, 28, 40, 55])
 
+## Exercise 1: implement `combine` with the help of `flatMap`
+
 ## Next: `merge`
 
 Next, we'll look at [`merge`](merge.html), which provides another way of joining
