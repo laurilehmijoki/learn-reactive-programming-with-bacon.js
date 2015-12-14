@@ -6,7 +6,7 @@ layout: default
 # Transforming streams with combinators
 
 When we work with streams, we often want to refine the values in a stream with
-some logic. Let's see how combinators in Bacon.js enable refinement.
+some logic. In Bacon.js, combinators enable refinement.
 
 Combinators let us build complex structures with simple functions. Combinators
 solve the same problem as the composition pattern in object-oriented
