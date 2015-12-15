@@ -35,4 +35,9 @@ inputs:
 Create a stream that indicates whether the user is active or not. A user is
 considered inactive if she hasn't typed or scrolled in 1 second.
 
-## Exercise 3: implement `merge` with the help of `flatMap`
+## Next – appendix: flatMap exercise
+
+Well done! You've now travelled through the basics of reactive programming.
+
+You can try additional [`flatMap` exercises](flatmap-exercises.html) if you feel
+like challenging yourself.
