@@ -39,5 +39,5 @@ considered inactive if she hasn't typed or scrolled in 1 second.
 
 Well done! You've now travelled through the basics of reactive programming.
 
-You can try additional [`flatMap` exercises](flatmap-exercises.html) if you feel
+You can try additional [`flatMap` exercises](flatMap-exercises.html) if you feel
 like challenging yourself.
