@@ -19,7 +19,7 @@ For example, this is how we can use the `map` combinator:
 ## Commonly used combinators in Bacon.js
 
 * `map` – transforms values in the stream
-* `filter` – rejects values in the stream
+* `filter` – lets through values in the stream
 * `flatMap` – spawns a stream with a new source
 * `combine` – combines the latest values of two streams using a two-arg function
 * `merge` – merges two streams into one stream that delivers events from both
